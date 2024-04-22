@@ -1,0 +1,27 @@
+{
+  "name": "@hiogawa/react-server-example-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && vite build --ssr",
+    "preview": "vite preview",
+    "cf-preview": "wrangler dev",
+    "cf-release": "wrangler deploy"
+  },
+  "dependencies": {
+    "@hiogawa/react-server": "latest",
+    "react": "19.0.0-canary-4c12339ce-20240408",
+    "react-dom": "19.0.0-canary-4c12339ce-20240408",
+    "react-server-dom-webpack": "19.0.0-canary-4c12339ce-20240408"
+  },
+  "devDependencies": {
+    "@hattip/adapter-node": "^0.0.44",
+    "@hiogawa/vite-plugin-ssr-middleware": "latest",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "latest"
+  }
+}
