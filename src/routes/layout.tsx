@@ -5,7 +5,7 @@ export default function Layout(props: React.PropsWithChildren) {
     <html suppressHydrationWarning>
       <head suppressHydrationWarning>
         <meta charSet="UTF-8" />
-        <title>React Server Starter</title>
+        <title>Vite rsc</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body suppressHydrationWarning>
