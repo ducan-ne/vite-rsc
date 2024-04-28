@@ -1,5 +1,6 @@
 'use server'
 
+import { Card, CardBody, Spinner } from './ui'
 import { Suspense } from 'react'
 
 let counter = 0
@@ -17,9 +18,11 @@ const LoadData2 = [async () => {
     setTimeout(resolve, 3e3)
   })
   return (
-    <p>
-      Line 2
-    </p>
+    <Card>
+      <CardBody>
+        Line 2 <span className="text-red-500">text red</span>
+      </CardBody>
+    </Card>
   )
 }][0]
 
@@ -29,18 +32,18 @@ const LoadData1 = [async () => {
     setTimeout(resolve, 2e3)
   })
   return (
-    <div>
+    <div className="p-2">
       Line 1
-      <Suspense fallback={<div>Loading data 2...</div>}>
-        <LoadData2/>
+      <Suspense fallback={<div><Spinner label="Loading line 2" /></div>}>
+        <LoadData2 />
       </Suspense>
     </div>
   )
 }][0]
 
-export function returnJSX() {
+export async function returnJSX() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><Spinner /></div>}>
       <LoadData1 />
     </Suspense>
   )

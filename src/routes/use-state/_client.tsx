@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from '@nextui-org/react'
 import React from "react";
 
 export function Counter() {
@@ -8,9 +9,9 @@ export function Counter() {
   return (
     <div>
       <span>Count: {value}</span>
-      <div>
-        <button onClick={() => setValue((v) => v - 1)}>-1</button>
-        <button onClick={() => setValue((v) => v + 1)}>+1</button>
+      <div className="flex gap-2">
+        <Button onClick={() => setValue((v) => v - 1)}>-1</Button>
+        <Button onClick={() => setValue((v) => v + 1)}>+1</Button>
       </div>
     </div>
   );

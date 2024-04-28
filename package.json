@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@hiogawa/react-server": "latest",
+    "@nextui-org/react": "^2.3.6",
+    "framer-motion": "^11.1.7",
     "react": "19.0.0-canary-4c12339ce-20240408",
     "react-dom": "19.0.0-canary-4c12339ce-20240408",
     "react-server-dom-webpack": "19.0.0-canary-4c12339ce-20240408"
@@ -22,6 +24,9 @@
     "@types/react": "18.2.66",
     "@types/react-dom": "18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
     "vite": "latest"
   }
 }

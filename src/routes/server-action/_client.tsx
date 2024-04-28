@@ -1,22 +1,22 @@
 'use client'
 
 import { useActionState } from '@hiogawa/react-server/client'
+import { Button } from '@nextui-org/react'
 import { changeCounter, returnJSX } from './_action'
 
 export function ReturnJSX() {
   const [state, action] = useActionState(returnJSX, null)
   return (
-    <>
-      <hr />
+    <div>
       {state}
-      <button
+      <Button
         onClick={async () => {
-          await action({})
+          action({})
         }}
       >
         Load
-      </button>
-    </>
+      </Button>
+    </div>
   )
 }
 
@@ -24,19 +24,21 @@ export function Counter({ value }: { value: number }) {
   return (
     <form action={changeCounter}>
       <div>Count: {value}</div>
-      <div>
-        <button
+      <div className="flex gap-2">
+        <Button
           name="delta"
+          type="submit"
           value={-1}
         >
           -1
-        </button>
-        <button
+        </Button>
+        <Button
           name="delta"
+          type="submit"
           value={+1}
         >
           +1
-        </button>
+        </Button>
       </div>
     </form>
   )
