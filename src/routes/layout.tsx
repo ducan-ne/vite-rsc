@@ -9,13 +9,7 @@ export default function Layout(props: React.PropsWithChildren) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body suppressHydrationWarning>
-        <h3>React Server Starter</h3>
-        <a
-          href="https://github.com/hi-ogawa/vite-plugins/tree/main/packages/react-server"
-          target="_blank"
-        >
-          GitHub
-        </a>
+        <h3>RSC</h3>
         <nav>
           <ul>
             <li>

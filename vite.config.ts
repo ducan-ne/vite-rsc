@@ -7,14 +7,19 @@ import {
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  plugins: [
-    react(),
-    vitePluginReactServer(),
-    vitePluginLogger(),
-    vitePluginSsrMiddleware({
-      entry: '/src/cf.ts',
-      preview: path.resolve('./dist/server/index.js'),
-    }),
-  ],
+export default defineConfig(({ mode }) => {
+  return ({
+    plugins: [
+      react(),
+      vitePluginReactServer(),
+      vitePluginLogger(),
+      vitePluginSsrMiddleware({
+        entry: mode === 'production' ? '/src/cf.ts' : '/src/dev.ts',
+        preview: path.resolve('./dist/server/index.js'),
+      }),
+    ],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(mode),
+    }
+  })
 })
