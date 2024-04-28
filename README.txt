@@ -1,1 +1,1 @@
-Deployed url: https://vite-rsc.mysubdomain.workers.dev/
+Deployed url: https://vite-rsc.graphvn.workers.dev/
